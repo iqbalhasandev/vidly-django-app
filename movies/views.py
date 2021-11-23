@@ -9,3 +9,7 @@ from movies.models import Movie
 def index(request):
     movies = Movie.objects.all()
     return render(request, 'movies/index.html', {'movies': movies})
+
+
+def details(request, movie_id):
+    return HttpResponse(movie_id)
